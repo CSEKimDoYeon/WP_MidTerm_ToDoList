@@ -1,0 +1,321 @@
+@charset "utf-8";
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #ffffff;
+  height: 100%;
+  width: 900px;
+  border: 1px solid;
+  margin: auto;
+  padding: 20px 30px 20px 30px;
+}
+
+article {
+  background-color: #ffffff;
+  height: 100%;
+  border-style: none;
+}
+
+/* Header Start */
+
+header {
+  background-color: #ffc000;
+  width: 800px;
+  border: 1px solid;
+  border-radius: 10px;
+  margin: auto;
+  padding: 5px;
+  text-align: center;
+}
+
+/* Header End */
+
+/* Main Start */
+
+main {
+  background-color: #ffffff;
+  height: 90%;
+  width: 800px;
+  margin: auto;
+  padding: 10px;
+}
+
+.middle {
+  float: left;
+  height: 98%;
+  width: 18%;
+  margin: 7px;
+}
+
+.middleTop {
+  line-height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  margin-bottom: 5px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.displayArea_mon {
+  background-color: #cfe0e0;
+  height: 95%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.displayArea_tue {
+  background-color: #e9b7b7;
+  height: 95%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.displayArea_wed {
+  background-color: #cce0e0;
+  height: 95%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.displayArea_thu {
+  background-color: #e2ddc0;
+  height: 95%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.displayArea_Fri {
+  background-color: skyblue;
+  height: 95%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.mainLine {
+  float: left;
+  height: 100%;
+  border-right: 1px solid;
+}
+
+/* Main End */
+
+.div_inline {
+  display: inline-block;
+}
+
+.div_inline_left {
+  display: inline-block;
+  text-align: left;
+}
+
+.div_inline_right {
+  display: inline-block;
+  text-align: right;
+}
+
+.object {
+  display: inline-block;
+  text-align: center;
+  width: 120px;
+  height: 120px;
+  background-color: white;
+  border: solid 2px black;
+}
+
+.out {
+  width: 100%;
+  text-align: center;
+}
+
+.in {
+  display: inline-block;
+}
+
+#pop_btn_Selector {
+  display: inline-block;
+  width: 300px;
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  background: white;
+  border: solid 2px black;
+  border-radius: 8px;
+  margin-bottom: 5px;
+}
+
+#pop_btn_Selector_obj {
+  display: inline-block;
+  width: 120px;
+  font-size: 15px;
+  color: black;
+  text-align: center;
+  background: white;
+  border: solid 2px black;
+  border-radius: 8px;
+  white-space: normal;
+}
+
+#pop_inputBox_title {
+  display: inline-block;
+  width: 300px;
+  font-size: 20px;
+  color: black;
+  background: white;
+  border: solid 2px black;
+  border-radius: 8px;
+  margin-bottom: 5px;
+}
+
+#pop_inputBox_content {
+  display: inline-block;
+  width: 300px;
+  height: 200px;
+  font-size: 20px;
+  color: black;
+  background: white;
+  border: solid 2px black;
+  border-radius: 8px;
+  white-space: normal;
+  margin-bottom: 5px;
+}
+
+#pop_inputBox_priority_pre {
+  display: inline-block;
+  width: 50px;
+  font-size: 15px;
+  color: black;
+  background: white;
+  border: solid 2px black;
+  border-radius: 8px;
+  white-space: normal;
+  margin-left: 40px;
+}
+
+#pop_inputBox_priority_to {
+  display: inline-block;
+  width: 70px;
+  font-size: 15px;
+  color: black;
+  background: white;
+  border: solid 2px black;
+  border-radius: 8px;
+  white-space: normal;
+  margin-left: 10px;
+}
+
+#btn_AddToDo {
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  background: yellow;
+  border: solid 2px black;
+  border-radius: 8px;
+}
+
+#btn_Add {
+  margin-left: 290px;
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  background: yellow;
+  border: solid 2px black;
+  border-radius: 8px;
+}
+
+#btn_Change {
+  margin-left: 290px;
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  background: yellow;
+  border: solid 2px black;
+  border-radius: 8px;
+}
+
+#btn_Selector {
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  background: white;
+  border: solid 2px black;
+  border-radius: 8px;
+}
+
+#input_Search {
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  background: white;
+  border: solid 2px black;
+  border-radius: 8px;
+}
+
+#mon_pre_set {
+  font-size: 15px;
+  background: white;
+  border: solid 2px black;
+}
+
+#Monday {
+  background: #CCFF33;
+}
+
+#Tuesday {
+  background: #6666FF;
+}
+
+#Wednesday {
+  background: #33FF00;
+}
+
+#Thursday {
+  background: #FF9933;
+}
+
+#Friday {
+  background: #FF33FF;
+}
+
+.obj_pre_set {
+  font-size: 15px;
+  border: solid 2px black;
+  margin-bottom: 3px;
+}
+
+.black_overlay {
+  display: none;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 120%;
+  background-color: black;
+  z-index: 1001;
+  opacity: .80;
+}
+
+.white_content {
+  display: none;
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  margin-left: 160px;
+  margin-top: 100px;
+  position: absolute;
+  background-color: white;
+  z-index: 1002;
+  overflow: auto;
+}
+
+img {
+  width: 25px;
+  height: 25px;
+  float: right;
+  margin: 5px 5px;
+}

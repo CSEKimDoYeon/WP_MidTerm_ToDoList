@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title>TODO in HTML5 Skeleton</title>
+	<!-- CSS, JS External 정의 -->
+	<link rel="stylesheet" type="text/css" href="TP1_SKELETON_CSS.css">
+
+
+	<script src="TP1_JS.js"></script>
+
+</head>
+
+<body>
+
+	<header>
+		<!-- Header (Add ToDo 버튼, keyword 검색) -->
+
+		<div>
+			<!--전체를 감싸는 div-->
+
+			<!--**************************AddToDo 버튼********************************-->
+
+			<div class="div_inline_left" style=" width: 30%;">
+				<input id="btn_AddToDo" type="button" value="Add ToDo" onClick="showPopup()">
+
+				<div id="light" class="white_content">
+
+					<div>
+						<img alt="" src="img/delete.png" id="closePopup" onclick="closePopup()">
+					</div>
+
+					<div>
+						<img alt="" src="img/delete.png" id="closePopup_obj" onclick="closePopup_obj()">
+					</div>
+
+					<br><br>
+
+					<div class="out">
+						<div class="in">
+							<select id="pop_btn_Selector" name='date'>
+	  							<option value=''>day</option>
+	  							<option value='Monday'>Monday</option>
+	  							<option value='Tuesday'>Tuesday</option>
+	  							<option value='Wednesday'>Wednesday</option>
+									<option value='Thursday'>Thursday</option>
+									<option value='Friday'>Friday</option>
+								</select>
+						</div>
+					</div>
+
+					<div class="out">
+						<div class="in">
+							<input id="pop_inputBox_title" type="text" value="" placeholder="Title">
+						</div>
+					</div>
+
+					<div class="out">
+						<div class="in">
+							<textarea id="pop_inputBox_content" placeholder="Content" style="word-break:break-all;">
+								</textarea>
+						</div>
+					</div>
+
+					<div>
+						<div class="div_inline_left">
+							<input id="pop_inputBox_priority_pre" type="text" value="" placeholder="Title">
+						</div>
+
+						<div class="div_inline_left">
+							<input id="pop_inputBox_priority_to" type="text" value="" placeholder="변경 순위">
+						</div>
+
+						<div class="div_inline_left">
+							<select id="pop_btn_Selector_obj" name='date'>
+										<option value=''>변경 요일</option>
+										<option value='Monday'>Monday</option>
+										<option value='Tuesday'>Tuesday</option>
+										<option value='Wednesday'>Wednesday</option>
+										<option value='Thursday'>Thursday</option>
+										<option value='Friday'>Friday</option>
+									</select>
+						</div>
+
+					</div>
+
+					<div>
+						<input id="btn_Add" type="button" value="Add" onClick="add_item()">
+					</div>
+
+					<div>
+						<input id="btn_Change" type="button" value="Done" onClick="change_item()">
+					</div>
+
+				</div>
+
+				<div id="fade" class="black_overlay"></div>
+			</div>
+
+			<!--**************************Day 버튼********************************-->
+
+			<div id="s_right" class="div_inline" style=" width: 30%;">
+				<select id="btn_Selector" name='date' onchange="searchByDate(this.value)">
+  					<option value=''>day</option>
+  					<option value='Monday'>Monday</option>
+  					<option value='Tuesday'>Tuesday</option>
+  					<option value='Wednesday'>Wednesday</option>
+						<option value='Thursday'>Thursday</option>
+						<option value='Friday'>Friday</option>
+					</select>
+			</div>
+
+			<!--**************************검색 버튼********************************-->
+
+			<div class="div_inline" style=" width: 30%;">
+				<input id="input_Search" type="text" value="" placeholder="Enter your keyword here" onkeydown="searchByTitle()">
+			</div>
+
+		</div>
+
+	</header>
+
+	<main>
+		<!-- Middle Bar A~D, Display Area A~D -->
+		<div id="middleBar_mon" class="middle">
+			<div class="middleTop"><b>tue</b></div>
+			<div class="displayArea_mon" id="displayArea_mon">
+				<b>월요일 목록</b>
+
+				<!--Add 객체 div-->
+				<div id="mon_pre_set" style="display:none">
+
+					<p id="mon_p_date">zz</p>
+					<p id="mon_p_title">yy</p>
+
+					<input type="button" value="수정" onclick="showPopup_obj(this, mon_array)">
+					<input type="button" value="삭제" onclick="remove_item(this,0)">
+				</div>
+
+				<div id="mon_field"></div>
+				<!--Add 객체 div-->
+
+			</div>
+
+		</div>
+		<!--경계선-->
+		<div class="mainLine"></div>
+
+		<div id="middleBar_tue" class="middle">
+			<div class="middleTop"><b>tue</b></div>
+			<div class="displayArea_tue" id="displayArea_tue">
+				<b>화요일 목록</b>
+
+				<!--Add 객체 div-->
+				<div id="tue_pre_set" style="display:none">
+					<p id="tue_p_date">zz</p>
+					<p id="tue_p_title">yy</p>
+
+					<input type="button" value="수정" onclick="showPopup_obj(this, tue_array)">
+					<input type="button" value="삭제" onclick="remove_item(this,1)">
+				</div>
+
+				<div id="tue_field"></div>
+				<!--Add 객체 div-->
+
+			</div>
+
+		</div>
+		<div class="mainLine"></div>
+
+		<div id="middleBar_wed" class="middle">
+			<div class="middleTop"><b>wed</b></div>
+			<div class="displayArea_wed" id="displayArea_wed">
+				<b>수요일 목록</b>
+
+				<!--Add 객체 div-->
+				<div id="wed_pre_set" style="display:none">
+					<p id="wed_p_date">zz</p>
+					<p id="wed_p_title">yy</p>
+
+					<input type="button" value="수정" onclick="showPopup_obj(this, wed_array)">
+					<input type="button" value="삭제" onclick="remove_item(this,2)">
+				</div>
+
+				<div id="wed_field"></div>
+				<!--Add 객체 div-->
+
+			</div>
+
+		</div>
+		<div class="mainLine"></div>
+
+		<div id="middleBar_thu" class="middle">
+			<div class="middleTop"><b>thu</b></div>
+			<div class="displayArea_thu" id="displayArea_thu">
+				<b>목요일 목록</b>
+
+				<!--Add 객체 div-->
+				<div id="thu_pre_set" style="display:none">
+					<p id="thu_p_date">zz</p>
+					<p id="thu_p_title">yy</p>
+
+					<input type="button" value="수정" onclick="showPopup_obj(this, thu_array)">
+					<input type="button" value="삭제" onclick="remove_item(this,3)">
+				</div>
+
+				<div id="thu_field"></div>
+				<!--Add 객체 div-->
+
+			</div>
+
+		</div>
+		<div class="mainLine"></div>
+
+		<div id="middleBar_fri" class="middle">
+			<div class="middleTop"><b>fri</b></div>
+			<div class="displayArea_Fri" id="displayArea_fri">
+				<b>금요일 목록</b>
+
+				<!--Add 객체 div-->
+				<div id="fri_pre_set" style="display:none">
+					<p id="fri_p_date">zz</p>
+					<p id="fri_p_title">yy</p>
+
+					<input type="button" value="수정" onclick="showPopup_obj(this, fri_array)">
+					<input type="button" value="삭제" onclick="remove_item(this,4)">
+				</div>
+
+				<div id="fri_field"></div>
+				<!--Add 객체 div-->
+
+			</div>
+
+		</div>
+
+	</main>
+
+</body>
+
+</html>
